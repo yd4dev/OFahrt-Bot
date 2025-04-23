@@ -1,4 +1,4 @@
-package tuda.ofahrt;
+package bot;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Dotenv dotenv = Dotenv.load();
         String token = dotenv.get("token");
-
+        
         JDA bot = JDABuilder.create(token, List.of(GatewayIntent.values()))
                 .addEventListeners(new MyListener())
                 .build();

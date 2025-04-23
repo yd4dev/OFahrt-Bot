@@ -1,4 +1,4 @@
-package tuda.ofahrt;
+package bot;
 
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
