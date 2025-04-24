@@ -14,10 +14,9 @@ public class Main {
         Dotenv dotenv = Dotenv.load();
         String token = dotenv.get("token");
         
-        JDA bot = JDABuilder.create(token, List.of(GatewayIntent.values()))
-                .addEventListeners(new MyListener())
+        JDA bot = JDABuilder.createDefault(token)
+                .enableIntents(List.of(GatewayIntent.values()))
+                .addEventListeners(new MessageListener())
                 .build();
-
-
     }
 }
